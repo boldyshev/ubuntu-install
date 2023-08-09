@@ -3,16 +3,40 @@
 Run [`install.sh`](install.sh)<br>
 User name, necessary paths and IPs are sourced from [`config/install.conf`](config/install.conf) file as variables
 
-1. Change `/etc/resolv.conf` symlink from `/run/systemd/resolve/stub-resolv.conf` to `/run/systemd/resolve/resolv.conf`.<br>
-It disables local DNS caching which is known to cause problems with domain names resolving https://github.com/systemd/systemd/issues/5755 <br>
-```sudo ln -sfn /run/systemd/resolve/resolv.conf /etc/resolv.conf```
-2. `apt update && apt upgrade`
+1. Change `/etc/resolv.conf` symlink from 
+   ```
+   /run/systemd/resolve/stub-resolv.conf
+   ``` 
+   to 
+   ```
+   /run/systemd/resolve/resolv.conf
+   ```
+   It disables local DNS caching which is known to cause problems with domain names resolving 
+   https://github.com/systemd/systemd/issues/5755 <br>
+   Terminal command
+   ```
+   sudo ln -sfn /run/systemd/resolve/resolv.conf /etc/resolv.conf
+   ```
+2. 
+   ```
+   apt update && apt upgrade
+   ```
+
 3. Generate ssh keys and copy public key to local NAS
 4. Install apts<br>
-`xargs sudo apt install -y < "${SCRIPT_DIR}/config/list_apts"`
-5. Install snaps. Attempt to install multiple snaps with `sudo snap install <package_1> <package_2>` returns<br>
-`error: cannot specify mode for multiple store snaps (only for one store snap or several local ones)`<br>
-Installing in a loop is OK, but it won't output the snap downloading progress in terminal<br>
+   ```
+   xargs sudo apt install -y < "${SCRIPT_DIR}/config/list_apts"
+   ```
+5. Install snaps. Attempt to install multiple snaps with 
+   ```
+   sudo snap install <package_1> <package_2>
+   ``` 
+   returns
+   ```
+   error: cannot specify mode for multiple store snaps (only for one store snap or several local ones)
+   ```
+
+   Installing in a loop is OK, but it won't output the snap downloading progress in terminal<br>
     ```
     while read p; do
      sudo snap install $p
