@@ -1,0 +1,7 @@
+{
+    "version": "2.0.0",
+    "autoload": {
+        "Logitech MX Master 3": "mouse_side_buttons",
+        "Logitech MX Anywhere 2S": "new preset"
+    }
+}
