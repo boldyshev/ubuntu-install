@@ -1,5 +1,6 @@
 ### Scripts for Ubuntu set up after fresh install
 
+Run [`install.sh`](install.sh)
 User name, necessary paths and IPs are sourced from [`config/install.conf`](config/install.conf) file as variables
 
 1. Change `/etc/resolv.conf` symlink from `/run/systemd/resolve/stub-resolv.conf` to `/run/systemd/resolve/resolv.conf`.<br>
