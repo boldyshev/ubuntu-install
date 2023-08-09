@@ -11,7 +11,7 @@ It disables local DNS caching which is known to cause problems with domain names
 `xargs sudo apt install -y < "${SCRIPT_DIR}/config/list_apts"`
 5. Install snaps. Attempt to install multiple snaps with `sudo snap install <package_1> <package_2>` returns<br>
 `error: cannot specify mode for multiple store snaps (only for one store snap or several local ones)`<br>
-Installing in a loop in OK, but it won't output the snap downloading progress in terminal<br>
+Installing in a loop is OK, but it won't output the snap downloading progress in terminal<br>
     ```
     while read p; do
      sudo snap install $p
