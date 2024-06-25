@@ -8,4 +8,5 @@ cm-super
 s-tui
 timeshift
 traceroute
+net-tools
 git
