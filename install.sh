@@ -69,7 +69,7 @@ sudo snap install nvtop
 echocolor "Installing deb packages"
 bash "${SCRIPT_DIR}/deb_chrome.sh"
 bash "${SCRIPT_DIR}/deb_jupyterlab.sh"
-bash "${SCRIPT_DIR}/deb_syn_drive.sh"
+#bash "${SCRIPT_DIR}/deb_syn_drive.sh"
 bash "${SCRIPT_DIR}/deb_input_remapper.sh"
 
 # Load gnome config
@@ -77,7 +77,7 @@ echocolor "Loading gnome config"
 bash "${SCRIPT_DIR}/config_load.sh ${RELEASE}"
 
 # Install ubuntu-restricted-extras (video codecs)
-echocolor "Install ubuntu-restricted-extras"
-sudo apt install -y ubuntu-restricted-extras
+#echocolor "Install ubuntu-restricted-extras"
+#sudo apt install -y ubuntu-restricted-extras
 
 reboot
