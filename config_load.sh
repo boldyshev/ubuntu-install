@@ -1,6 +1,7 @@
 #!/bin/bash
 # Load Gnome configurations
 
+RELEASE="$1"
 SCRIPT_DIR=$(dirname "${0}")
 
 source "${SCRIPT_DIR}/config/install.conf"
@@ -12,6 +13,8 @@ cp -rp "${SCRIPT_DIR}/config/wallpaper.png" "${wallpapers_path}"
 dconf load / < "${SCRIPT_DIR}/config/dconf/$(hostname).dconf"
 
 # Language
-sudo cp -rp "${SCRIPT_DIR}/config/locale" "${locale_path}"
-sudo timedatectl set-timezone "${time_zone}"
-cp -rp "${SCRIPT_DIR}/config/pam_environment" "${pam_environment_path}"
+if [ $RELEASE == "22.04" ]; then
+  sudo cp -rp "${SCRIPT_DIR}/config/locale" "${locale_path}"
+  sudo timedatectl set-timezone "${time_zone}"
+  cp -rp "${SCRIPT_DIR}/config/pam_environment" "${pam_environment_path}"
+fi

@@ -1,5 +1,7 @@
 #!/bin/bash
-# Install apps and set configurations after fresh install
+# Install apps and set configurations after fresh install of Ubuntu 22.04 or 24.04
+
+RELEASE="$1"
 
 # Color output
 function echocolor() { # $1 = string
@@ -19,9 +21,11 @@ source "${SCRIPT_DIR}/config/install.conf"
 echocolor "Change resolv.conf symlink"
 sudo ln -sfn /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
-# Change apt update server to Main
-#echocolor "Change apt update server to Main"
-#sudo sed -i 's|http://[a-z][a-z].archive|http://archive|g' /etc/apt/sources.list
+# Change apt update server to Main (only for 22.04)
+if [ $RELEASE == "22.04" ]; then
+  echocolor "Change apt update server to Main"
+  sudo sed -i 's|http://[a-z][a-z].archive|http://archive|g' /etc/apt/sources.list
+fi
 
 # Update packages
 echocolor "apt update"
@@ -41,6 +45,8 @@ ssh-copy-id -i "/home/${user}/.ssh/id_ed25519.pub" "queen@${nas_ip}"
 echocolor "Installing apts"
 xargs sudo apt install -y < "${SCRIPT_DIR}/config/list_apts"
 
+sudo bash "${SCRIPT_DIR}/install_docker.sh"
+
 echocolor "Installing snaps"
 # can't install multiple snaps via xargs
 # install in a loop won't show downloading progress
@@ -56,7 +62,6 @@ sudo snap install bitwarden
 sudo snap install nmap
 sudo snap install curl
 sudo snap install slack
-sudo snap install pomatez
 sudo snap install qbittorrent-arnatious
 sudo snap install nvtop
 
@@ -69,7 +74,7 @@ bash "${SCRIPT_DIR}/deb_input_remapper.sh"
 
 # Load gnome config
 echocolor "Loading gnome config"
-bash "${SCRIPT_DIR}/config_load.sh"
+bash "${SCRIPT_DIR}/config_load.sh ${RELEASE}"
 
 # Install ubuntu-restricted-extras (video codecs)
 echocolor "Install ubuntu-restricted-extras"

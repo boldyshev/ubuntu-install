@@ -1,20 +1,80 @@
 [apps/update-manager]
 first-run=false
-launch-count=15
-launch-time=int64 1685458368
+launch-count=78
+launch-time=int64 1718290581
 show-details=true
-window-height=1016
-window-width=1191
+window-height=1415
+window-width=1584
 
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1684865127
+release-check-time=uint32 1718518643
+
+[org/blueman/general]
+services-last-item=1
+window-properties=[1170, 738, 5346, 1923]
+
+[org/blueman/network]
+nap-enable=false
+
+[org/blueman/plugins/autoconnect]
+services=@a(ss) []
+
+[org/blueman/plugins/powermanager]
+auto-power-on=@mb false
+
+[org/blueman/plugins/recentconns]
+recent-connections=[{'adapter': '48:F1:7F:E1:5B:67', 'address': '00:42:79:B5:A1:0A', 'alias': 'JBL Charge 3', 'icon': 'audio-card', 'name': 'Audio and input profiles', 'uuid': '00000000-0000-0000-0000-000000000000', 'time': '1712667093.9655108'}, {'adapter': '48:F1:7F:E1:5B:67', 'address': '10:29:59:5D:AD:1D', 'alias': 'Beats Studio³', 'icon': 'audio-headphones', 'name': 'Audio and input profiles', 'uuid': '00000000-0000-0000-0000-000000000000', 'time': '1712667204.602155'}]
+
+[org/gnome/Totem]
+active-plugins=['mpris', 'autoload-subtitles', 'movie-properties', 'skipto', 'recent', 'vimeo', 'apple-trailers', 'open-directory', 'rotation', 'save-file', 'screenshot', 'variable-rate', 'screensaver']
+subtitle-encoding='UTF-8'
+
+[org/gnome/baobab/ui]
+window-size=(2832, 1528)
+window-state=87168
+
+[org/gnome/calculator]
+accuracy=9
+angle-units='degrees'
+base=10
+button-mode='basic'
+number-format='automatic'
+show-thousands=false
+show-zeroes=false
+source-currency=''
+source-units='degree'
+target-currency=''
+target-units='radian'
+window-position=(3580, 1065)
+word-size=64
+
+[org/gnome/calendar]
+active-view='month'
+window-maximized=true
+window-position=(2160, 520)
+window-size=(3840, 2036)
+
+[org/gnome/cheese]
+burst-delay=1000
+camera='0825'
+photo-x-resolution=1280
+photo-y-resolution=960
+video-x-resolution=1280
+video-y-resolution=960
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='display'
 
 [org/gnome/deja-dup]
-backend='google'
-prompt-check='2023-05-11T09:21:33.076849Z'
+backend='local'
+include-list=@as []
+prompt-check='2024-05-26T20:48:20.075009Z'
+
+[org/gnome/desktop/a11y/applications]
+screen-reader-enabled=false
+
+[org/gnome/desktop/a11y/interface]
+high-contrast=false
 
 [org/gnome/desktop/a11y/magnifier]
 mouse-tracking='proportional'
@@ -36,10 +96,14 @@ translate=true
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/boris/Pictures/Wallpapers/wallpaper.png'
-picture-uri-dark='file:///home/boris/Pictures/Wallpapers/wallpaper.png'
+picture-uri='file:///home/boris/Pictures/wallpaper.png'
+picture-uri-dark='file:///home/boris/Pictures/wallpaper.png'
 primary-color='#000000'
 secondary-color='#000000'
+show-desktop-icons=false
+
+[org/gnome/desktop/calendar]
+show-weekdate=false
 
 [org/gnome/desktop/input-sources]
 mru-sources=[('xkb', 'ru'), ('xkb', 'us')]
@@ -49,22 +113,31 @@ sources=[('xkb', 'us'), ('xkb', 'ru')]
 xkb-options=['grp_led:scroll', 'grp:caps_toggle']
 
 [org/gnome/desktop/interface]
+clock-show-weekday=false
 color-scheme='prefer-dark'
 cursor-theme='Yaru'
 font-hinting='slight'
 font-name='Ubuntu 13'
 gtk-theme='Yaru-dark'
 icon-theme='Yaru'
-text-scaling-factor=1.25
+text-scaling-factor=1.3999999999999999
+toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['snap-store-ubuntu-software', 'gnome-control-center', 'apport-gtk', 'software-properties-gtk', 'firefox-firefox', 'io-snapcraft-sessionagent', 'thunderbird', 'org-gnome-fileroller', 'telegram-desktop-telegram-desktop', 'org-gnome-gedit', 'update-manager', 'xdg-desktop-portal-gnome', 'snap-store-snap-store', 'mountable-volume-f4a2609da2606658', 'org-gnome-dejadup', 'pycharm-community-pycharm-community', 'jupyterlab-desktop', 'bitwarden-bitwarden', 'gnome-power-panel', 'org-gnome-terminal', 'code-code']
+application-children=['snap-store-ubuntu-software', 'gnome-control-center', 'apport-gtk', 'software-properties-gtk', 'firefox-firefox', 'io-snapcraft-sessionagent', 'thunderbird', 'org-gnome-fileroller', 'telegram-desktop-telegram-desktop', 'org-gnome-gedit', 'update-manager', 'xdg-desktop-portal-gnome', 'snap-store-snap-store', 'mountable-volume-f4a2609da2606658', 'org-gnome-dejadup', 'pycharm-community-pycharm-community', 'jupyterlab-desktop', 'bitwarden-bitwarden', 'gnome-power-panel', 'org-gnome-terminal', 'code-code', 'org-qbittorrent-qbittorrent', 'org-gnome-nautilus', 'pomatez-pomatez', 'balena-etcher', 'gnome-network-panel', 'google-chrome', 'libreoffice-writer', 'location-file-media-video', 'org-gnome-eog', 'libreoffice-impress', 'org-gnome-evince', 'slack-slack', 'obsidian', 'blueman-manager', 'org-gnome-baobab']
+show-banners=false
 
 [org/gnome/desktop/notifications/application/apport-gtk]
 application-id='apport-gtk.desktop'
 
+[org/gnome/desktop/notifications/application/balena-etcher]
+application-id='balena-etcher.desktop'
+
 [org/gnome/desktop/notifications/application/bitwarden-bitwarden]
 application-id='bitwarden_bitwarden.desktop'
+
+[org/gnome/desktop/notifications/application/blueman-manager]
+application-id='blueman-manager.desktop'
 
 [org/gnome/desktop/notifications/application/code-code]
 application-id='code_code.desktop'
@@ -75,8 +148,14 @@ application-id='firefox_firefox.desktop'
 [org/gnome/desktop/notifications/application/gnome-control-center]
 application-id='gnome-control-center.desktop'
 
+[org/gnome/desktop/notifications/application/gnome-network-panel]
+application-id='gnome-network-panel.desktop'
+
 [org/gnome/desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
+
+[org/gnome/desktop/notifications/application/google-chrome]
+application-id='google-chrome.desktop'
 
 [org/gnome/desktop/notifications/application/io-snapcraft-sessionagent]
 application-id='io.snapcraft.SessionAgent.desktop'
@@ -84,11 +163,32 @@ application-id='io.snapcraft.SessionAgent.desktop'
 [org/gnome/desktop/notifications/application/jupyterlab-desktop]
 application-id='jupyterlab-desktop.desktop'
 
+[org/gnome/desktop/notifications/application/libreoffice-impress]
+application-id='libreoffice-impress.desktop'
+
+[org/gnome/desktop/notifications/application/libreoffice-writer]
+application-id='libreoffice-writer.desktop'
+
+[org/gnome/desktop/notifications/application/location-file-media-video]
+application-id='location:file:///media/video.desktop'
+
 [org/gnome/desktop/notifications/application/mountable-volume-f4a2609da2606658]
 application-id='mountable-volume:F4A2609DA2606658.desktop'
 
+[org/gnome/desktop/notifications/application/obsidian]
+application-id='obsidian.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-baobab]
+application-id='org.gnome.baobab.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-dejadup]
 application-id='org.gnome.DejaDup.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-eog]
+application-id='org.gnome.eog.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-evince]
+application-id='org.gnome.Evince.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-fileroller]
 application-id='org.gnome.FileRoller.desktop'
@@ -96,11 +196,23 @@ application-id='org.gnome.FileRoller.desktop'
 [org/gnome/desktop/notifications/application/org-gnome-gedit]
 application-id='org.gnome.gedit.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-terminal]
 application-id='org.gnome.Terminal.desktop'
 
+[org/gnome/desktop/notifications/application/org-qbittorrent-qbittorrent]
+application-id='org.qbittorrent.qBittorrent.desktop'
+
+[org/gnome/desktop/notifications/application/pomatez-pomatez]
+application-id='pomatez_pomatez.desktop'
+
 [org/gnome/desktop/notifications/application/pycharm-community-pycharm-community]
 application-id='pycharm-community_pycharm-community.desktop'
+
+[org/gnome/desktop/notifications/application/slack-slack]
+application-id='slack_slack.desktop'
 
 [org/gnome/desktop/notifications/application/snap-store-snap-store]
 application-id='snap-store_snap-store.desktop'
@@ -117,6 +229,9 @@ application-id='telegram-desktop_telegram-desktop.desktop'
 [org/gnome/desktop/notifications/application/thunderbird]
 application-id='thunderbird.desktop'
 
+[org/gnome/desktop/notifications/application/transmission-gtk]
+application-id='transmission-gtk.desktop'
+
 [org/gnome/desktop/notifications/application/update-manager]
 application-id='update-manager.desktop'
 
@@ -124,10 +239,10 @@ application-id='update-manager.desktop'
 application-id='xdg-desktop-portal-gnome.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
-numlock-state=true
+numlock-state=false
 
 [org/gnome/desktop/peripherals/mouse]
-speed=0.46323529411764697
+speed=0.88235294117647056
 
 [org/gnome/desktop/peripherals/touchpad]
 two-finger-scrolling-enabled=true
@@ -156,23 +271,41 @@ background-color='rgb(0,0,0)'
 use-background-color=true
 
 [org/gnome/evince]
-document-directory=@ms 'file:///home/boris/syn/rl-text'
+document-directory=@ms 'file:///home/boris/syn/dl-detection'
+
+[org/gnome/evince/default]
+continuous=true
+dual-page=false
+dual-page-odd-left=false
+enable-spellchecking=true
+fullscreen=false
+inverted-colors=false
+show-sidebar=false
+sidebar-page='links'
+sidebar-size=148
+sizing-mode='free'
+window-ratio=(1.1797385620915033, 0.78535353535353536)
+zoom=2.5
 
 [org/gnome/evolution-data-server]
 migrated=true
 network-monitor-gio-name=''
 
+[org/gnome/file-roller/dialogs/extract]
+recreate-folders=true
+skip-newer=false
+
 [org/gnome/file-roller/listing]
 list-mode='as-folder'
-name-column-width=250
+name-column-width=987
 show-path=false
 sort-method='name'
-sort-type='ascending'
+sort-type='descending'
 
 [org/gnome/file-roller/ui]
 sidebar-width=200
-window-height=480
-window-width=600
+window-height=1316
+window-width=1814
 
 [org/gnome/gedit/plugins]
 active-plugins=['docinfo', 'openlinks', 'modelines', 'spell', 'sort', 'filebrowser']
@@ -180,10 +313,15 @@ active-plugins=['docinfo', 'openlinks', 'modelines', 'spell', 'sort', 'filebrows
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/boris/.config/input-remapper-2'
+virtual-root='file:///home/boris/syn/ubuntu-install'
 
 [org/gnome/gedit/preferences/editor]
+auto-save=false
+auto-save-interval=uint32 1
+editor-font='Monospace 12'
 scheme='Yaru-dark'
+use-default-font=false
+wrap-last-split-mode='word'
 
 [org/gnome/gedit/preferences/ui]
 show-tabs-mode='auto'
@@ -192,11 +330,14 @@ show-tabs-mode='auto'
 bottom-panel-size=140
 side-panel-active-page='GeditWindowDocumentsPanel'
 side-panel-size=200
-size=(1920, 1483)
+size=(1919, 1518)
 state=87168
 
 [org/gnome/mutter]
 experimental-features=['scale-monitor-framebuffer']
+
+[org/gnome/nautilus/compression]
+default-compression-format='zip'
 
 [org/gnome/nautilus/icon-view]
 captions=['none', 'none', 'none']
@@ -212,9 +353,9 @@ search-filter-time-type='last_modified'
 search-view='list-view'
 
 [org/gnome/nautilus/window-state]
-initial-size=(1403, 1165)
+initial-size=(2136, 1914)
 maximized=false
-sidebar-width=241
+sidebar-width=348
 start-with-sidebar=true
 
 [org/gnome/nm-applet/eap/89a6e2a5-2c3f-42dc-8f35-1d2c001fa8c0]
@@ -229,6 +370,10 @@ ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
+[org/gnome/nm-applet/eap/e96b41b8-e627-36ca-aff4-e8a683e27927]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [org/gnome/nm-applet/eap/f3c6796c-8ea7-47af-96c2-0512e862834d]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
@@ -237,64 +382,102 @@ ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
+[org/gnome/settings-daemon/plugins/color]
+night-light-enabled=true
+night-light-schedule-automatic=false
+night-light-schedule-from=21.0
+night-light-temperature=uint32 3195
+
 [org/gnome/settings-daemon/plugins/power]
 power-button-action='suspend'
-sleep-inactive-ac-timeout=3600
+sleep-inactive-ac-timeout=900
 sleep-inactive-ac-type='nothing'
 
 [org/gnome/shell]
 app-picker-layout=[{'software-properties-drivers.desktop': <{'position': <0>}>, 'sol.desktop': <{'position': <1>}>, 'org.gnome.Calendar.desktop': <{'position': <2>}>, 'firefox_firefox.desktop': <{'position': <3>}>, 'forticlient.desktop': <{'position': <4>}>, 'input-remapper-gtk.desktop': <{'position': <5>}>, 'gnome-language-selector.desktop': <{'position': <6>}>, 'org.gnome.Totem.desktop': <{'position': <7>}>, 'libreoffice-startcenter.desktop': <{'position': <8>}>, 'org.gnome.gedit.desktop': <{'position': <9>}>, 'simple-scan.desktop': <{'position': <10>}>, 'libreoffice-calc.desktop': <{'position': <11>}>, 'gnome-system-monitor.desktop': <{'position': <12>}>, 'libreoffice-draw.desktop': <{'position': <13>}>, 'libreoffice-impress.desktop': <{'position': <14>}>, 'Utilities': <{'position': <15>}>, 'libreoffice-math.desktop': <{'position': <16>}>, 'yelp.desktop': <{'position': <17>}>, 'libreoffice-writer.desktop': <{'position': <18>}>, 'org.gnome.Cheese.desktop': <{'position': <19>}>, 'org.gnome.Mahjongg.desktop': <{'position': <20>}>, 'org.gnome.Mines.desktop': <{'position': <21>}>}, {'nvidia-settings.desktop': <{'position': <0>}>, 'org.gnome.PowerStats.desktop': <{'position': <1>}>, 'org.remmina.Remmina.desktop': <{'position': <2>}>, 'rhythmbox.desktop': <{'position': <3>}>, 'shotwell.desktop': <{'position': <4>}>, 'software-properties-gtk.desktop': <{'position': <5>}>, 'update-manager.desktop': <{'position': <6>}>, 'gnome-session-properties.desktop': <{'position': <7>}>, 'usb-creator-gtk.desktop': <{'position': <8>}>, 'org.gnome.Sudoku.desktop': <{'position': <9>}>, 'synology-drive.desktop': <{'position': <10>}>, 'thunderbird.desktop': <{'position': <11>}>, 'org.gnome.Todo.desktop': <{'position': <12>}>, 'transmission-gtk.desktop': <{'position': <13>}>, 'snap-store_ubuntu-software.desktop': <{'position': <14>}>, 'vlc_vlc.desktop': <{'position': <15>}>}]
-favorite-apps=['google-chrome.desktop', 'pycharm-community_pycharm-community.desktop', 'org.gnome.Terminal.desktop', 'htop_htop.desktop', 'org.gnome.Nautilus.desktop', 'bitwarden_bitwarden.desktop', 'telegram-desktop_telegram-desktop.desktop', 'org.gnome.Evince.desktop', 'code_code.desktop', 'jupyterlab-desktop.desktop', 'gnome-control-center.desktop', 'org.gnome.Calculator.desktop']
+favorite-apps=['google-chrome.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'pycharm-community_pycharm-community.desktop', 'telegram-desktop_telegram-desktop.desktop', 'org.gnome.Evince.desktop', 'code_code.desktop', 'jupyterlab-desktop.desktop', 'gnome-control-center.desktop', 'org.gnome.Calculator.desktop', 'bitwarden.desktop', 'slack_slack.desktop', 'org.gnome.gedit.desktop', 'tad.desktop', 'obsidian.desktop', 'snap-store_ubuntu-software.desktop', 'org.gnome.eog.desktop']
 had-bluetooth-devices-setup=true
 welcome-dialog-last-shown-version='42.5'
 
 [org/gnome/shell/extensions/dash-to-dock]
-dash-max-icon-size=56
+dash-max-icon-size=64
 dock-position='BOTTOM'
+extend-height=true
 isolate-monitors=false
 multi-monitor=true
+preferred-monitor=-2
+preferred-monitor-by-connector='HDMI-1'
 
 [org/gnome/shell/extensions/ding]
-icon-size='standard'
-show-home=false
+icon-size='small'
+show-home=true
+show-trash=false
+start-corner='bottom-right'
 
 [org/gnome/software]
-check-timestamp=int64 1685458319
+check-timestamp=int64 1718711185
+update-notification-timestamp=int64 1718711187
 
 [org/gnome/system/location]
 enabled=false
 
+[org/gnome/terminal/legacy]
+menu-accelerator-enabled=false
+
 [org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
-font='Monospace 15'
+default-size-columns=130
+default-size-rows=89
+font='Monospace 14'
 use-system-font=false
 visible-name='boris'
 
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=false
+show-hidden=true
 show-size-column=true
 show-type-column=true
 sidebar-width=410
 sort-column='name'
-sort-directories-first=false
+sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-size=(1623, 969)
+window-size=(1623, 1859)
 
 [org/gtk/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=true
+show-hidden=false
 show-size-column=true
 show-type-column=true
-sidebar-width=211
+sidebar-width=397
 sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(821, 190)
-window-size=(2196, 1647)
+window-position=(2426, 1081)
+window-size=(1628, 1535)
+
+[org/yorba/shotwell/crop-settings]
+last-crop-height=448
+last-crop-menu-choice=1
+last-crop-width=64
+
+[org/yorba/shotwell/preferences/export]
+constraint='ORIGINAL'
+export-format-mode='SPECIFIED'
+export-metadata=true
+photo-file-format='PNG'
+quality='HIGH'
+scale=1200
+
+[org/yorba/shotwell/preferences/ui]
+pin-toolbar-state=false
+
+[org/yorba/shotwell/preferences/window]
+direct-height=1999
+direct-maximize=false
+direct-width=3840
 
 [system/locale]
 region='en_GB.UTF-8'

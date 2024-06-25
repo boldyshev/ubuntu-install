@@ -1,6 +1,7 @@
 #! /bin/bash
 # Save current Gnome settings
 
+RELEASE="$1"
 SCRIPT_DIR=$(dirname "${0}")
 
 source "${SCRIPT_DIR}/config/install.conf"
@@ -19,5 +20,7 @@ cp -rp "${jupyter_lab_config}" "${SCRIPT_DIR}/config"
 cp -rp "${input_remapper_path}/input-remapper-2" "${SCRIPT_DIR}/config"
 
 # Language
-cp -rp "${locale_path}" "${SCRIPT_DIR}/config"
-cp -rp "${pam_environment_path}" "${SCRIPT_DIR}/config"
+if [ $RELEASE == "22.04" ]; then
+  cp -rp "${locale_path}" "${SCRIPT_DIR}/config"
+  cp -rp "${pam_environment_path}" "${SCRIPT_DIR}/config"
+fi

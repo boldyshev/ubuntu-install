@@ -5,24 +5,11 @@
     // ***************************************
 
     // Editor Configuration
-    // The configuration for all text editors.
+    // The configuration for all text editors; it will override the CodeMirror default configuration.
     // If `fontFamily`, `fontSize` or `lineHeight` are `null`,
     // values from current theme are used.
     "editorConfig": {
-        "autoClosingBrackets": false,
-        "codeFolding": false,
-        "cursorBlinkRate": 530,
-        "fontFamily": null,
-        "fontSize": 14,
-        "insertSpaces": true,
-        "lineHeight": null,
         "lineNumbers": true,
-        "lineWrap": "on",
-        "matchBrackets": true,
-        "readOnly": false,
-        "tabSize": 4,
-        "rulers": [],
-        "showTrailingSpace": false,
-        "wordWrapColumn": 80
+        "autoClosingBrackets": true
     }
 }
