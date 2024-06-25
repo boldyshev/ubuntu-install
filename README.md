@@ -1,7 +1,18 @@
-### Scripts for Ubuntu set up after fresh install
+## Scripts for Ubuntu set up after fresh install
 
-Run [`install.sh`](install.sh)<br>
+Tested on 22.04.4 and 24.04 LTS releases
+
+### Usage
+
+```bash
+git clone https://github.com/boldyshev/ubuntu-install.git
+cd ubuntu-install
+bash install.sh 24.04 # or 22.04
+```
 User name, necessary paths and IPs are sourced from [`config/install.conf`](config/install.conf) file as variables
+
+
+### What does it do:
 
 1. Change `/etc/resolv.conf` symlink from 
    ```
@@ -22,7 +33,7 @@ User name, necessary paths and IPs are sourced from [`config/install.conf`](conf
    apt update && apt upgrade
    ```
 
-3. Generate ssh keys and copy public key to local NAS
+3. Generate ssh keys and copy public key to local Network Attached Storage
 4. Install apts<br>
    ```
    xargs sudo apt install -y < "${SCRIPT_DIR}/config/list_apts"
