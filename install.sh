@@ -70,7 +70,7 @@ echocolor "Installing deb packages"
 bash "${SCRIPT_DIR}/deb_chrome.sh"
 #bash "${SCRIPT_DIR}/deb_jupyterlab.sh"
 bash "${SCRIPT_DIR}/deb_syn_drive.sh"
-bash "${SCRIPT_DIR}/deb_input_remapper.sh"
+bash "${SCRIPT_DIR}/deb_input_remapper.sh ${RELEASE}"
 
 # Load gnome config
 echocolor "Loading gnome config"

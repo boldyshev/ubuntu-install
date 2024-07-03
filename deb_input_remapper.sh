@@ -22,9 +22,10 @@ if [ $RELEASE == "22.04" ]; then
 elif [ $RELEASE == "24.04" ]; then
   sudo apt install git python3-setuptools gettext
   git clone https://github.com/sezanzeb/input-remapper.git
-  ./input-remapper/scripts/build.sh
-  sudo apt install -f input-remapper/dist/input-remapper-2.0.1.deb
-  rm -r input-remapper
+  cd input-remapper && ./scripts/build.sh
+  sudo apt install -f ./dist/input-remapper-2.0.1.deb -y
+  cd ..
+  rm -rf input-remapper -y
 fi
 
 # Load config
